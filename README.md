@@ -14,9 +14,7 @@ Summary: A simple wrapper around optparse for powerful command line utilities.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/click-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/click-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/click-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/click-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/click-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/click-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/click-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/click-feedstock)
 
 Current release info
 ====================
