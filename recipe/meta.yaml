@@ -1,24 +1,24 @@
-{% set version = "7.0" %}
+{% set version = "5.1" %}
 
 package:
   name: click
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/C/Click/Click-{{ version }}.tar.gz
-  sha256: 5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7
+  url: https://pypi.io/packages/source/c/click/click-{{ version }}.tar.gz
+  sha256: 678c98275431fad324275dec63791e4a17558b40e5a110e20a82866139a85a5a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
 
 test:
   imports:
@@ -27,7 +27,7 @@ test:
 about:
   home: https://palletsprojects.com/p/click
   license: BSD-3-Clause
-  license_file: LICENSE.rst
+  license_file: LICENSE
   license_family: BSD
   summary: 'Python composable command line interface toolkit'
   dev_url: https://github.com/pallets/click
