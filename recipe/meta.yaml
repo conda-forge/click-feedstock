@@ -1,4 +1,4 @@
-{% set version = "7.1" %}
+{% set version = "7.1.1" %}
 
 package:
   name: click
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/click/click-{{ version }}.tar.gz
-  sha256: 482f552f2d5452b9eeffc44165e8b790dd53f75bcce099a812b65e0357e860e2
+  sha256: 8a18b4ea89d8820c5d0c7da8a64b2c324b4dabb695804dbfea19b9be9d88c0cc
 
 build:
   number: 0
