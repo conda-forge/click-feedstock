@@ -15,14 +15,18 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
 
 test:
+  requires:
+    - pip
   imports:
     - click
+  commands:
+    - pip check
 
 about:
   home: https://palletsprojects.com/p/click
