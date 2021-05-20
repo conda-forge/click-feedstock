@@ -22,6 +22,7 @@ requirements:
   run:
     - python
     - colorama  # [win]
+    - importlib-metadata  # [py<38]
 
 test:
   requires:
