@@ -30,7 +30,8 @@ test:
   imports:
     - click
   commands:
-    - pip check
+    # temporarily skipping pip check on win and pypy build because of bizarre tqdm issue
+    - pip check  # [not win or python_impl != 'pypy']
 
 about:
   home: https://palletsprojects.com/p/click
