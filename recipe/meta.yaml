@@ -1,4 +1,4 @@
-{% set version = "8.1.1" %}
+{% set version = "8.1.2" %}
 
 package:
   name: click
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/click/click-{{ version }}.tar.gz
-  sha256: 7ab900e38149c9872376e8f9b5986ddcaf68c0f413cf73678a0bca5547e6f976
+  sha256: 479707fe14d9ec9a0757618b7a100a0ae4c4e236fac5b7f80ca68028141a1a72
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
