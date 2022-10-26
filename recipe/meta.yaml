@@ -9,20 +9,17 @@ source:
   sha256: 7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  number: 2
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
-    - colorama  # [win]
-    - importlib-metadata  # [py<38]
+    - python >=3.8
+    - colorama
 
 test:
   requires:
@@ -30,8 +27,7 @@ test:
   imports:
     - click
   commands:
-    # temporarily skipping pip check on win and pypy build because of bizarre tqdm issue
-    - pip check  # [not (win and python_impl == 'pypy')]
+    - pip check
 
 about:
   home: https://palletsprojects.com/p/click/
