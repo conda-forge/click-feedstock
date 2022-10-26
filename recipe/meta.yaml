@@ -12,6 +12,8 @@ build:
   number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"   # [win]
+  string: "unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"   # [unix]
 
 requirements:
   host:
@@ -19,7 +21,9 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - colorama
+    - colorama   # [win]
+    - __win      # [win]
+    - __unix     # [unix]
 
 test:
   requires:
