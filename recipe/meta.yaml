@@ -1,4 +1,4 @@
-{% set version = "8.1.3" %}
+{% set version = "8.1.4" %}
 
 package:
   name: click
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/click/click-{{ version }}.tar.gz
-  sha256: 7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e
+  sha256: b97d0c74955da062a7d4ef92fadb583806a585b2ea81958a81bd72726cbb8e37
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  string: "win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"   # [win]
-  string: "unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"   # [unix]
+  string: win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [win]
+  string: unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [unix]
 
 requirements:
   host:
