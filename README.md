@@ -1,11 +1,11 @@
-About click
-===========
+About click-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/click-feedstock/blob/main/LICENSE.txt)
 
 Home: https://palletsprojects.com/p/click/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/click-feedstock/blob/main/LICENSE.txt)
 
 Summary: Composable command line interface toolkit
 
