@@ -1,3 +1,4 @@
+{% set name = "click" %}
 {% set version = "8.1.4" %}
 
 package:
@@ -5,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/click/click-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/click-{{ version }}.tar.gz
   sha256: b97d0c74955da062a7d4ef92fadb583806a585b2ea81958a81bd72726cbb8e37
 
 build:
