@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/click-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/click-{{ version }}.tar.gz
   sha256: ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   string: win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [win]
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - colorama   # [win]
     - __win      # [win]
     - __unix     # [unix]
@@ -29,6 +29,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - click
   commands:
