@@ -1,5 +1,5 @@
 {% set name = "click" %}
-{% set version = "8.1.7" %}
+{% set version = "8.1.8" %}
 
 package:
   name: click
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/click-{{ version }}.tar.gz
-  sha256: ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de
+  sha256: ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   string: win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [win]
   string: unix_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [unix]
 
