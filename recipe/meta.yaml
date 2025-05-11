@@ -1,5 +1,6 @@
 {% set name = "click" %}
-{% set version = "8.1.8" %}
+{% set version = "8.2.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: click
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/click-{{ version }}.tar.gz
-  sha256: ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a
+  sha256: f5452aeddd9988eefa20f90f05ab66f17fce1ee2a36907fd30b05bbb5953814d
 
 build:
   number: 0
