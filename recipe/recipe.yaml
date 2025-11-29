@@ -44,4 +44,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - starlite-api
+    - ocefpaf
+    - xylar
