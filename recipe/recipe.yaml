@@ -25,9 +25,12 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - colorama
     - if: win
-      then: __win
+      then: 
+        - colorama
+        - __win
+    - if: unix
+      then: __unix
 
 tests:
   - python:
@@ -41,7 +44,14 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: Composable command line interface creation kit
-
+  description: |
+    Click is a Python package for creating beautiful command line interfaces
+    in a composable way with as little code as necessary. It's the "Command
+    Line Interface Creation Kit". It's highly configurable but comes with
+    sensible defaults out of the box.
+  repository: https://github.com/pallets/click/
+  documentation: https://click.palletsprojects.com/
+  
 extra:
   recipe-maintainers:
     - ocefpaf
