@@ -7,27 +7,7 @@ Home: https://palletsprojects.com/p/click/
 
 Package license: BSD-3-Clause
 
-Summary: Composable command line interface toolkit
-
-Development: https://github.com/pallets/click/
-
-Documentation: https://click.palletsprojects.com/
-
-Click is a Python package for creating beautiful command line interfaces
-in a composable way with as little code as necessary. It's the "Command
-Line Interface Creation Kit". It's highly configurable but comes with
-sensible defaults out of the box.
-
-It aims to make the process of writing command line tools quick and fun
-while also preventing any frustration caused by the inability to
-implement an intended CLI API.
-
-Click in three points:
-
--   Arbitrary nesting of commands
--   Automatic help page generation
--   Supports lazy loading of subcommands at runtime
-
+Summary: Composable command line interface creation kit
 
 Current build status
 ====================
@@ -163,6 +143,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@ocefpaf](https://github.com/ocefpaf/)
-* [@xylar](https://github.com/xylar/)
+* [@starlite-api](https://github.com/starlite-api/)
 
