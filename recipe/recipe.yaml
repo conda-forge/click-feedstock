@@ -25,11 +25,9 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - python >=${{ python_min }}
     - __${{ noarch_platform }}
-    - if: noarch_platform == "win"
-      then:
-        - colorama
+    - ${{ "colorama" if noarch_platform == "win" else "python" }}
+    - python >=${{ python_min }}
 
 tests:
   - python:
