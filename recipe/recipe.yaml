@@ -1,57 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
-  name: click
-  version: 8.3.1
-  python_min: "3.10"
+  version: "8.3.2"
+  python_check_max: "3.14"
 
 package:
-  name: ${{ name }}
+  name: click
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/click-${{ version }}.tar.gz
-  sha256: 12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a
+  url: https://pypi.org/packages/source/c/click/click-${{ version }}.tar.gz
+  sha256: 14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5
 
 build:
+  number: 0
   noarch: python
-  number: 1
-  script: python -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
-    - python ${{ python_min }}.*
-    - flit-core <4
+    - flit-core >=3.11,<4
     - pip
+    - python ${{ python_min }}.*
   run:
+    - __${{ noarch_platform }}
+    - ${{ "colorama" if noarch_platform == "win" else "python" }}
     - python >=${{ python_min }}
-    - if: win
-      then: 
-        - colorama
-        - __win
-    - if: unix
-      then: __unix
 
 tests:
   - python:
-      imports:
-        - click
-      python_version: ${{ python_min }}.*
+      imports: click
       pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
 
 about:
-  homepage: https://palletsprojects.com/p/click/
+  homepage: https://pypi.org/project/click
   license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: Composable command line interface creation kit
+  summary: Composable command line interface toolkit
   description: |
     Click is a Python package for creating beautiful command line interfaces
     in a composable way with as little code as necessary. It's the "Command
     Line Interface Creation Kit". It's highly configurable but comes with
     sensible defaults out of the box.
-  repository: https://github.com/pallets/click/
-  documentation: https://click.palletsprojects.com/
-  
+  repository: https://github.com/pallets/click
+  documentation: https://click.palletsprojects.com
+
 extra:
   recipe-maintainers:
     - ocefpaf
