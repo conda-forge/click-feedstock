@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "8.3.3"
+  version: "8.4.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/click/click-${{ version }}.tar.gz
-  sha256: 398329ad4837b2ff7cbe1dd166a4c0f8900c3ca3a218de04466f38f6497f18a2
+  sha256: 638f1338fe1235c8f4e008e4a8a254fb5c5fbdcbb40ece3c9142ebb78e792973
 
 build:
   number: 0
