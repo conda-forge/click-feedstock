@@ -8,6 +8,3 @@ conda_install_tool: pixi
 github:
   branch_name: main
   tooling_branch_name: main
-noarch_platforms:
-  - linux_64
-  - win_64
