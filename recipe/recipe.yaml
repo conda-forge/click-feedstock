@@ -21,9 +21,9 @@ build:
 
 requirements:
   host:
-    - flit-core >=3.11,<4
-    - pip
     - python ${{ python_min }}.*
+    - pip
+    - flit-core >=3.11,<4
   run:
     - python >=${{ python_min }}
 
@@ -34,6 +34,7 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
+        - "*"
 
 about:
   homepage: https://pypi.org/project/click
